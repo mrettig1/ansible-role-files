@@ -1,0 +1,18 @@
+###See all options here https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html
+
+#Examples:
+
+#files:
+#  '/tmp/testfile':
+#    state: absent
+#    owner: root
+#    group: root
+#    mode:  644
+#  '/tmp/directory':
+#    state: directory
+#    owner: foo
+#    group: foo
+#    mode:  775
+#  '/tmp/foooo':
+#    state: link
+#    src: "/var/log"

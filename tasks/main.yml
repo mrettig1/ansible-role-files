@@ -1,0 +1,24 @@
+---
+- name: Create Files / Directorys / Symlinks
+  file:
+    state: "{{ item.value.state | default('file') }}"
+    path: "{{ item.key }}"
+    owner: "{{ item.value.owner | default(omit) }}"
+    group: "{{ item.value.group | default(omit) }}"
+    mode: "{{ item.value.mode | default(omit) }}"
+    src: "{{ item.value.src | default(omit) }}"
+    access_time: "{{ item.value.access_time | default(omit) }}"
+    access_time_format: "{{ item.value.access_time | default('%Y%m%d%H%M.%S') }}"
+    attributes: "{{ item.value.attributes | default(omit) }}"
+    follow: "{{ item.value.follow | default(true) }}"
+    force: "{{ item.value.force | default(false) }}"
+    modification_time: "{{ item.value.modification_time | default(omit) }}"
+    modification_time_format: "{{ item.value.modification_time_format | default('%Y%m%d%H%M.%S') }}"
+    recurse: "{{ item.value.recurse | default(false) }}"
+    selevel: "{{ item.value.selevel | default(omit) }}"
+    serole: "{{ item.value.serole | default(omit) }}"
+    setype: "{{ item.value.setype | default(omit) }}"
+    seuser: "{{ item.value.seuser | default(omit) }}"
+    unsafe_writes: "{{ item.value.unsafe_writes | default(false) }}"
+  loop: "{{ lookup('dict', files) }}"
+  diff: yes
