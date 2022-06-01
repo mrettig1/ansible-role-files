@@ -9,9 +9,13 @@ Folders, symlinks, file permissions, owner and group can be easily managed via v
 
 ## Example Playbook
 
-    - hosts: all
-      roles:
-        - { role: files }
+- hosts: all
+  tasks:
+  - name: files
+    import_role:
+      name: files
+    tags:
+      - files
 
 *Inside `group_vars/all.yml`*:
 ```
