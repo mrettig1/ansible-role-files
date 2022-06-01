@@ -9,6 +9,7 @@ Folders, symlinks, file permissions, owner and group can be easily managed via v
 
 ## Example Playbook
 
+```
 - hosts: all
   tasks:
   - name: files
@@ -16,6 +17,7 @@ Folders, symlinks, file permissions, owner and group can be easily managed via v
       name: files
     tags:
       - files
+```
 
 *Inside `group_vars/all.yml`*:
 ```
