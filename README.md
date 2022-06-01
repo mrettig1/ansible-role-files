@@ -13,6 +13,7 @@ Folders, symlinks, file permissions, owner and group can be easily managed via v
       roles:
         - { role: files }
 
+```
 *Inside `group_vars/all.yml`*:
     files:
       '/tmp/testfile':
@@ -28,3 +29,4 @@ Folders, symlinks, file permissions, owner and group can be easily managed via v
       '/tmp/foooo':
         state: link
         src: "/var/log"
+```
