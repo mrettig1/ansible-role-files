@@ -2,7 +2,7 @@
 
 A wrapper for the Official File Module of Ansible.
 
-With the role you can easily use all options of the Ansible module in variables.
+With the role you can easily use all options of the Ansible File module in variables.
 
 Folders, symlinks, file permissions, owner and group can be easily managed via variables.
 
