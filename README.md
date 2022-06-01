@@ -6,6 +6,7 @@ With the role you can easily use all options of the Ansible module in variables.
 
 Folders, symlinks, file permissions, owner and group can be easily managed via variables.
 
+All available options can be found here: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html
 
 ## Example Playbook
 
