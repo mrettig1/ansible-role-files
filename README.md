@@ -14,17 +14,17 @@ Folders, symlinks, file permissions, owner and group can be easily managed via v
         - { role: files }
 
 *Inside `group_vars/all.yml`*:
-  files:
-    '/tmp/testfile':
-      state: absent
-      owner: root
-      group: root
-      mode:  644
-    '/tmp/directory':
-      state: directory
-      owner: foo
-      group: foo
-      mode:  775
-    '/tmp/foooo':
-      state: link
-      src: "/var/log"
+    files:
+      '/tmp/testfile':
+        state: absent
+        owner: root
+        group: root
+        mode:  644
+      '/tmp/directory':
+        state: directory
+        owner: foo
+        group: foo
+        mode:  775
+      '/tmp/foooo':
+        state: link
+        src: "/var/log"
